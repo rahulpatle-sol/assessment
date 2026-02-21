@@ -1,5 +1,7 @@
 import 'react-toastify/dist/ReactToastify.css';
 import { createBrowserRouter, Navigate } from 'react-router-dom';
+//  importing cdertificated route 
+import CertificateManager from "@/domains/Certificates/CertificateManager"
 
 import { ProtectedRoute } from './protected-route';
 import { AppRoot } from './app-root';
@@ -81,6 +83,7 @@ export const routes = [
       { path: 'roles-and-permissions', element: <RoleAndPermission /> },
       { path: 'departments', element: <ListDepartmentsPage /> },
       { path: 'departments/edit/:id', element: <EditDepartmentPage /> },
+      { path: 'certificates', element: <CertificateManager /> },
       { path: 'notices/recipients', element: <ListNoticeRecipients /> },
       { path: 'notices/recipients/edit/:id', element: <EditNoticeRecipientPage /> },
       { path: '*', element: <NotFound /> }
